@@ -14,4 +14,18 @@ function abCheck(str) {
     if (str.length < letterSpace +2) {
         return 'false'
     }
+
+    for (let i = 0; i < str.length - letterSpace -1; i++) {
+        if (str[i] === searchLetters[0]) {
+            if (str[i + letterSpace + 1]=== searchLetters[1]) {
+                return 'true';
+            }
+        }
+        if (str[i] === searchLetters[1]) {
+            if (str[i + letterSpace + 1] === searchLetters[0]) {
+                return 'true';
+            }
+        }
+    }
+    return 'false'
 }
